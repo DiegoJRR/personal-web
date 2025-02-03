@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <meta
-    name="description"
-    content="Diego's personal website. Contact information and more."
-  />
   <head>
+    <meta
+      name="description"
+      content="Diego's personal website. Contact information and more."
+    />
     <title>diegojrr</title>
     <link rel="icon" type="image/x-icon" href="./src/nabla.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +48,7 @@
       .main-content {
         position: relative;
         z-index: 2;
-        padding: 20px;
+        padding: 40px; /* Increased padding for more spacing */
         text-align: center;
         border: 2px solid #00ff00;
         box-shadow: 0 0 10px #00ff00;
@@ -61,7 +61,7 @@
       ul {
         transform: scale(1, 1.5);
         transform-origin: center;
-        margin: 10px 0;
+        margin: 15px 0; /* Increased margin for vertical spacing */
         text-shadow:
           0 0 2px #ff6600,
           0 0 4px #ff6600,
@@ -75,11 +75,14 @@
       p,
       ul {
         font-size: 1em;
-        line-height: 1.2;
+        line-height: 1.5; /* Increased line-height for easier reading */
       }
       ul {
         list-style-type: none;
         padding: 0;
+      }
+      ul li {
+        margin: 2px 0; /* Extra spacing between list items */
       }
       a {
         color: #ff6600;
@@ -132,7 +135,7 @@
       img {
         max-width: 200px;
         border: 2px solid #00ff00;
-        margin: 20px auto;
+        margin: 10px auto; /* Spacing around the image */
         display: block;
         filter: sepia(100%) hue-rotate(20deg) saturate(400%) brightness(0.8)
           contrast(1.5);
@@ -153,17 +156,11 @@
         <p>
           <span class="data-label">WHO:</span> PHYSICS STUDENT AND PROGRAMMER
         </p>
-        <p><span class="data-label">FIND ME:</span></p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/diegojrr/">LinkedIn</a></li>
-          <li><a href="https://github.com/DiegoJRR">GitHub</a></li>
-          <li>
-            <a
-              href="https://drive.google.com/drive/folders/183EOtpMufnj4lFD0vQx7y45mN5N8e45k?usp=sharing"
-              >CV</a
-            >
-          </li>
-        </ul>
+        <p><span class="data-label">FIND ME:</span>
+          <a href="https://www.linkedin.com/in/diegojrr/">LinkedIn</a>
+          <a href="https://github.com/DiegoJRR">GitHub</a>
+          <a href="https://drive.google.com/drive/folders/183EOtpMufnj4lFD0vQx7y45mN5N8e45k?usp=sharing">CV</a>
+        </p>
       </div>
     </div>
   </body>
