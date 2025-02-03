@@ -48,11 +48,11 @@
       .main-content {
         position: relative;
         z-index: 2;
-        padding: 40px; /* Increased padding for more spacing */
+        padding: 20px; /* Increased padding for more spacing */
         text-align: center;
         border: 2px solid #00ff00;
         box-shadow: 0 0 10px #00ff00;
-        max-width: 600px;
+        max-width: 35%;
         width: 100%;
         overflow: hidden;
       }
@@ -119,26 +119,32 @@
         }
       }
       .flicker {
-        animation: flicker 0.08s infinite;
+        animation: flicker 0.25s infinite;
       }
       @keyframes flicker {
         0% {
-          opacity: 0.95;
+          opacity: 0.97;
         }
         50% {
           opacity: 1;
         }
         100% {
-          opacity: 0.95;
+          opacity: 0.97;
         }
       }
-      img {
+      img.flicker {
         max-width: 200px;
         border: 2px solid #00ff00;
         margin: 10px auto; /* Spacing around the image */
         display: block;
         filter: sepia(100%) hue-rotate(20deg) saturate(400%) brightness(0.8)
           contrast(1.5);
+      }
+      .based-in img {
+        margin-top: 20px;
+        height: 2em;  /* Matches the current font size */
+        width: 5em;  /* Preserves the aspect ratio */
+        vertical-align: bottom;
       }
     </style>
   </head>
@@ -147,19 +153,32 @@
       <div class="scanline"></div>
       <div class="flicker">
         <div class="header">
-          <h1>DIEGO RAMÍREZ</h1>
+          <h1>Diego Ramírez</h1>
         </div>
         <img
+          class="flicker"
           src="src/retrato.jpg"
           alt="Retrato hecho por Regina Crespo: https://twitter.com/tanque_ruso"
         />
         <p>
-          <span class="data-label">WHO:</span> PHYSICS STUDENT AND PROGRAMMER
+          Engineering at Netflix
         </p>
-        <p><span class="data-label">FIND ME:</span>
+        <p>
+          <span class="data-label">Prev:</span> Meta, ClimateAI
+        </p>
+        <p>
+          <span class="data-label">Undergrad:</span> Physics at ITESM
+        </p>
+        <p></span>
           <a href="https://www.linkedin.com/in/diegojrr/">LinkedIn</a>
-          <a href="https://github.com/DiegoJRR">GitHub</a>
           <a href="https://drive.google.com/drive/folders/183EOtpMufnj4lFD0vQx7y45mN5N8e45k?usp=sharing">CV</a>
+          <a href="https://github.com/DiegoJRR">GitHub</a>
+        </p>
+        <p class="based-in">
+          Based in
+          <a href="https://maps.app.goo.gl/Pe28arhkNpUhQJg67" target="_blank">
+            <img src="src/sf.png"/>
+          </a>
         </p>
       </div>
     </div>
