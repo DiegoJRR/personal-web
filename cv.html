@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Diego Ramirez's Curriculum Vitae." />
+    <title>diegojrr - CV</title>
+    <link rel="icon" type="image/x-icon" href="./src/nabla.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Overall Page Styling */
+      body {
+        background-color: #000000;
+        color: #ff6600;
+        margin: 0;
+        padding: 20px;
+        font-family: "PixeloidSans", monospace;
+        overflow-y: auto;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(0, 255, 0, 0.1) 0px,
+            rgba(0, 255, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 20px
+          ),
+          repeating-linear-gradient(
+            to right,
+            rgba(0, 255, 0, 0.1) 0px,
+            rgba(0, 255, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 20px
+          );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      /* CV Content Container */
+      .cv-content {
+        width: 70%;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .cv-content {
+          width: 90%;
+        }
+      }
+
+      /* Shared Typography & Effects */
+      h1, h2, h3, li {
+        transform: scale(1, 1.5);
+        transform-origin: center;
+        margin: 15px 0;
+        text-shadow: 0 0 2px #ff6600, 0 0 4px #ff6600, 0 0 6px #ff6600;
+        letter-spacing: 1px;
+        font-weight: lighter;
+      }
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+      h2 {
+        font-size: 1.3em;
+        border-bottom: 1px solid #00ff00;
+        padding-bottom: 10px;
+        margin-top: 30px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      a {
+        color: #ff6600;
+        text-decoration: underline;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .header p {
+        margin: 5px 0;
+      }
+
+      /* Back Button Styling */
+      .back-button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 12px 18px;
+        border: 2px solid #00ff00;
+        color: #ff6600;
+        text-decoration: none;
+        text-shadow: 0 0 2px #ff6600, 0 0 4px #ff6600, 0 0 6px #ff6600;
+        transition: background 0.3s;
+      }
+
+      .back-button:hover {
+        background: rgba(255, 102, 0, 0.2);
+      }
+
+      /* Job/Item Container Styles */
+      .job, .education-item, .project {
+        margin-bottom: 25px;
+      }
+
+      .job p, .education-item p, .project p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-content">
+      <!-- Back Button -->
+      <a href="index.html" class="back-button">&larr; Back to Home</a>
+
+      <!-- Contact Header -->
+      <header class="header">
+        <h1>Diego Ramirez</h1>
+        <p>
+          Email: <a href="mailto:diegojrr00@gmail.com">diegojrr00@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+          Website: <a href="https://diegojrr.com/">diegojrr.com</a>
+        </p>
+        <p>
+          Mobile: +1 (669) 208-2941 &nbsp;&nbsp;|&nbsp;&nbsp;
+          LinkedIn: <a href="https://www.linkedin.com/in/diegojrr/">Diego Ramirez</a>
+        </p>
+        <p>Location: San Francisco, CA</p>
+      </header>
+
+      <!-- Relevant Experience -->
+      <section id="relevant-experience">
+        <h2>Relevant Experience</h2>
+        <div class="job">
+          <h3>Netflix &mdash; Los Gatos, CA</h3>
+          <p><strong>Software Engineer</strong> &mdash; Aug 2023 - Present</p>
+          <p>
+            Cloud Network Engineering: Working on tooling for network debugging at scale.
+            Mainly working with Go and Python.
+          </p>
+        </div>
+        <div class="job">
+          <h3>ClimateAI &mdash; Remote</h3>
+          <p><strong>Software Engineer</strong> &mdash; Oct 2022 - Jul 2023</p>
+          <p>
+            Dashboard and Visualizations: Implemented a complete GraphQL API to centralize data from all our
+            microservices. Developed a robust pipeline for PDF report scheduling and generation for our dashboard
+            product, which became one of the platform’s most used features.
+          </p>
+        </div>
+        <div class="job">
+          <h3>Zumby &mdash; Remote</h3>
+          <p><strong>Data Engineer</strong> &mdash; Sep 2021 - Jun 2022</p>
+          <p>
+            State-wide Payroll Tax: Worked with large datasets (∼ 10⁷ rows) to optimize tax collection for a state
+            government in Mexico. As the only data engineer on the team, I optimized processes, created robust data
+            pipelines, and even developed an internal library for pipeline execution in Python.
+          </p>
+          <p><em>Had breaks from this job for the summer internships.</em></p>
+          <p>*Full list of positions can be found on my LinkedIn</p>
+        </div>
+      </section>
+
+      <!-- Internship Experience -->
+      <section id="internships">
+        <h2>Internship Experience</h2>
+        <div class="job">
+          <h3>Meta &mdash; Menlo Park, CA</h3>
+          <p><strong>Software Engineer Intern</strong> &mdash; Jun 2022 - Sep 2022</p>
+          <p>
+            Instagram Developer Platform: Full stack work on the Instagram Developer Platform team, using Hack, Python,
+            and JavaScript.
+          </p>
+        </div>
+        <div class="job">
+          <h3>Meta</h3>
+          <p><strong>Software Engineer Intern</strong> &mdash; Jun 2021 - Sep 2021</p>
+          <p>
+            Novi Growth: Refactored the backend of the onboarding flow for the Novi app by introducing a state machine
+            to support complex flows for tiered KYC.
+          </p>
+        </div>
+        <div class="job">
+          <h3>Meta</h3>
+          <p><strong>Software Engineer Intern</strong> &mdash; Jun 2020 - Aug 2020</p>
+          <p>
+            FBU: Worked on the iOS track (Objective-C) under the Messenger for Business team.
+          </p>
+        </div>
+        <div class="job">
+          <h3>Prothesia &mdash; Monterrey, MX</h3>
+          <p><strong>Software Engineer Intern</strong> &mdash; Feb 2020 - Jun 2020</p>
+          <p>
+            Application Development: As the only SWE at this startup, I was responsible for all software projects.
+            Developed a 3D scanning app for iOS to capture biometric data from patients, and a multiplatform app for the
+            digital prescription of orthotic devices.
+          </p>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>Tecnol&oacute;gico de Monterrey</h3>
+          <p><strong>B.S. in Engineering Physics</strong> &mdash; 2019 - 2023</p>
+          <p>Monterrey, MX</p>
+        </div>
+        <div class="education-item">
+          <h3>Universidad Aut&oacute;noma de Nuevo Le&oacute;n</h3>
+          <p><strong>B.S. in Physics</strong> &mdash; 2018 - 2019</p>
+          <p>Monterrey, MX <em>(changed university)</em></p>
+        </div>
+        <div class="education-item">
+          <h3>Centro de Investigaci&oacute;n y Desarrollo de Educaci&oacute;n Biling&uuml;e</h3>
+          <p><strong>International Baccalaureate Diploma Graduate</strong> &mdash; 2015 - 2019</p>
+          <p>Monterrey, MX</p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>CEI Air Quality Monitoring</h3>
+          <p>
+            Lead a team of four students to develop an air quality monitoring website for a local non-profit. I continue to
+            support this project.
+          </p>
+        </div>
+        <div class="project">
+          <h3>CarWash App</h3>
+          <p>
+            A freelance project developed in collaboration with a colleague for a startup— a multiplatform mobile app.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <p><strong>Languages:</strong> Python, Typescript, Hack, SQL, Objective-C</p>
+        <p><strong>Technologies:</strong> AWS, React, Kafka</p>
+      </section>
+    </div>
+  </body>
+</html>
